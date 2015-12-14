@@ -4,7 +4,7 @@ myOSM = L.tileLayer('http://ajax.pirates.42monkeys.co.uk/osm_tiles/{z}/{x}/{y}.p
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 });
 var planningScanGeology;
-planningScanGeology = L.tileLayer.wms('http://localjost:8080/geoserver/wms', 
+planningScanGeology = L.tileLayer.wms('http://localhost:8080/geoserver/wms', 
 {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 	layers: 'herefordshire_geology',
@@ -122,7 +122,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
-var geojson = L.geoJson(lsoaElectricity2013Geojson, {
-    onEachFeature: onEachFeature,
-    style: style
-}).addTo(map);
+// var geojson = L.geoJson(lsoaElectricity2013Geojson, {
+//     onEachFeature: onEachFeature,
+//     style: style
+// }).addTo(map);
