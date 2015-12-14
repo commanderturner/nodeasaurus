@@ -8,8 +8,6 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var uploadgeometry = require('./routes/uploadgeometry');
-var uploadnonspatial = require('./routes/uploadnonspatial');
 var map = require('./routes/map');
 
 var app = express();
@@ -29,8 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/uploadgeometry', uploadgeometry);
-app.use('/uploadnonspatial', uploadnonspatial);
 app.use('/map', map);
 
 // catch 404 and forward to error handler
